@@ -1,0 +1,240 @@
+
+
+
+/* Main content styling */
+.content {
+    margin-top: 20px;
+    padding: 20px;
+    background: linear-gradient(135deg, #4b4646, #1d1c1c); /* Dark gray to lighter gray gradient */
+    border-radius: 8px;
+    max-width: 50%; /* Adjusts the width relative to its parent */
+    margin-left: auto; /* Centers the container horizontally */
+    margin-right: auto; /* Centers the container horizontally */
+}
+
+/* Cart Details */
+.cart-details {
+    background: linear-gradient(135deg, #222, #444); /* Gradient from dark gray to lighter gray */
+    padding: 20px;
+    border: 1px solid #444;
+    border-radius: 16px; /* Increased border-radius for a more rounded appearance */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: white;
+    display: flex;
+    flex-direction: column; /* Ensure items stack properly */
+}
+
+/* Cart items list styling */
+#billingCartItems {
+    list-style-type: none;
+    padding: 0;
+    color: white;
+    margin: 0; /* Reset default margin */
+}
+
+#billingCartItems li {
+    padding: 12px 20px; /* Adjusted padding for better spacing */
+    border-bottom: 1px solid #ece9e9;
+    border-radius: 8px; /* Rounded corners for each list item */
+    margin-bottom: 10px; /* Add spacing between items */
+}
+
+#billingCartItems li:last-child {
+    border-bottom: none;
+}
+
+/* Customer details form styling */
+.customer-details {
+    margin-top: 30px;
+    background: linear-gradient(135deg, #222, #444); /* Dark gray to lighter gray gradient */
+    padding: 20px;
+    border: 1px solid #444;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.customer-details h2 {
+    color: white; /* Set text color to white */
+}
+
+.customer-details h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: white; /* Set text color to white */
+}
+
+
+.customer-details label {
+    font-weight: bold;
+    color: #fff; /* White text for labels */
+}
+
+.customer-details input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #706868; /* Gray border */
+    border-radius: 4px;
+    background-color: #383737; /* Dark background for input fields */
+    color: white; /* White text for input */
+}
+/* Style for input placeholders */
+#customerDetailsForm input::placeholder {
+    color: white; /* Set placeholder text color to white */
+}
+
+/* Payment method selection styling */
+.payment-method {
+    margin-top: 30px;
+}
+
+.payment-method h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.payment-method label {
+    font-weight: bold;
+    color: #fff; /* White text for labels */
+}
+
+.payment-method .form-check {
+    margin-bottom: 15px;
+}
+
+/* Print view button styling */
+.print-button {
+    margin-top: 30px;
+}
+
+.print-button button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 4px;
+    background: linear-gradient(135deg, #222, #444); /* Gray gradient button */
+    color: white;
+    border: none;
+}
+
+/* Optional: Center the PayPal button container */
+#paypalButtonWrapper {
+    display: flex;
+    justify-content: center; /* Horizontal centering */
+    align-items: center; /* Vertical centering */
+    margin-top: 20px; /* Adjust as needed */
+}
+
+/* Modal content */
+.modal-content {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, #222, #444); /* Gradient modal */
+    color: white; /* Set all text inside the modal to white */
+}
+
+.modal-header {
+    background-color: #444; /* Lighter gray header */
+    color: white; /* Ensure header text is white */
+    border-bottom: 2px solid #444; /* Gray border */
+}
+
+.modal-title {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.modal-body {
+    background-color: #333; /* Dark background for modal body */
+    color: white; /* Ensure body text is white */
+}
+
+/* Cart modal items */
+#modalCartItems {
+    max-height: 300px; /* Limit height for scrollable content */
+    overflow-y: auto; /* Enable scrolling if content exceeds height */
+}
+
+.list-group-item {
+    border: 1px solid #444; /* Light gray border */
+    margin-bottom: 0.5rem; /* Space between items */
+    background: #a8a6a6; /* Dark background for list items */
+    color: white; /* Ensure list items text is white */
+}
+
+
+#modalTotalAmount {
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: #ff6600; /* Highlight total amount in orange */
+}
+
+/* Button styling */
+.btn-primary {
+    background-color: #444; /* Lighter gray background */
+    border-color: #444; /* Match border color */
+    color: white; /* White text */
+}
+
+.btn-primary:hover {
+    background-color: #333; /* Darker gray on hover */
+    border-color: #222; /* Darker border on hover */
+}
+
+/* Gradient background for customer details */
+.customer-details {
+    background: linear-gradient(135deg, #222, #444); /* Dark gray to lighter gray gradient */
+}
+
+/* Form control */
+.form-control {
+    background-color: #333; /* Dark background for inputs */
+    color: white; /* White text in input fields */
+    border: 1px solid #444; /* Gray border */
+}
+
+/* Hide the custom button in cart details and modal cart items */
+.cart-details .btn-custom,
+#modalCartItems .btn-custom {
+    display: none;
+}
+/* Style the placeholder text of 'Amount Given' to white */
+#amountGiven::placeholder {
+    color: white;
+}
+
+/* Style the text of 'Amount Change' to green */
+#amountChange {
+    color: green; /* Green text color */
+    background-color: #fcf8f8; /* Dark background for the input */
+
+}
+/* Customer Details Section */
+.customer-details {
+    margin-bottom: 30px; /* Add space below Customer Details form */
+}
+
+/* Cart Items Section */
+#billingCartItems {
+    margin-top: 30px; /* Add space above Cart Items list */
+}
+
+/* Optional: Add space to any form elements for better separation */
+#customerDetailsForm .form-group,
+#cartItemsForm .form-group {
+    margin-bottom: 15px; /* Add space between each form field */
+}
+/* Style the Checkout Button */
+#checkoutButton {
+    background: linear-gradient(135deg, orange, black); /* Orange to black gradient */
+    color: white; /* White text */
+    border: none; /* Remove default border */
+    padding: 10px 20px; /* Adjust padding for better button size */
+    border-radius: 5px; /* Rounded corners for the button */
+    font-size: 1rem; /* Adjust font size */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background 0.3s ease; /* Smooth transition for background */
+}
+
+/* Hover effect */
+#checkoutButton:hover {
+    background: linear-gradient(135deg, black, orange); /* Reverse gradient on hover */
+}

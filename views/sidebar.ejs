@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJ SWEETHUB POS</title>
+    <style>
+         .toggle-btn {
+            position: fixed; /* Fix the toggle button's position */
+            left: 10px; /* Distance from the left edge */
+            top: 10px; /* Distance from the top edge */
+            z-index: 1000; /* Ensure it’s on top of the sidebar and other elements */
+        }
+        /* Optionally, you can add styles for the hidden class */
+        .hidden {
+            display: none; /* Hides the sidebar when the class is added */
+        }
+    </style>
+</head>
+<body>
+
+    <button id="toggleSidebar" class="btn btn-light toggle-btn">
+        <img src="/img/switch-on.png" alt="Icon" id="toggleIcon" width="20">
+    </button>
+      
+<div class="sidebar" id="sidebar">
+    <h4 class="flickering-text text-light text-center mb-4">
+        <span class="text-light">EJ SWEETHUB POS</span>
+    </h4>
+    <ul class="list-unstyled">
+        
+        <li class="sidebar-item">
+            <a href="/menu">
+                <img src="/img/arrow-right.png" alt="Arrow Icon" class="arrow-icon"> 
+                <img src="/img/menu.png" alt="Menu Icon" class="icon"> Menu            </a>
+        </li>
+        <li class="sidebar-item">
+            <a href="/billing">
+                <img src="/img/arrow-right.png" alt="Arrow Icon" class="arrow-icon"> 
+
+                <img src="/img/bill.png" alt="Bill Icon" class="icon"> Billing           </a>
+            </a>
+        </li>
+        <li class="sidebar-item">
+            <a href="#" id="logoutLink" onclick="confirmLogout()">
+                <img src="/img/arrow-right.png" alt="Arrow Icon" class="arrow-icon"> 
+                <img src="/img/logout.png" alt="Logout Icon" class="icon"> Logout              </a>
+        </li>
+    </ul>
+</div>
+
+<script>
+       document.getElementById('toggleSidebar').addEventListener('click', function() {
+        const sidebar = document.getElementById('sidebar');
+        const toggleIcon = document.getElementById('toggleIcon');
+
+        // Toggle sidebar visibility
+        sidebar.classList.toggle('hidden');
+
+        // Toggle icon image
+        if (sidebar.classList.contains('hidden')) {
+            toggleIcon.src = '/img/switch.png'; // Path to your toggle (open) icon
+        } else {
+            toggleIcon.src = '/img/switch-on.png'; // Path to your toggle (close) icon
+        }
+    });
+
+
+    function confirmLogout() {
+        if (confirm("Are you sure you want to logout?")) {
+            // Add your logout logic here, e.g., redirect or make a logout request
+            window.location.href = '/logout';
+        }
+    }
+</script>
+
+</body>
+</html>
