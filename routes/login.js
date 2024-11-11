@@ -19,25 +19,23 @@ router.post('/login', async (req, res) => {
         
         // Check if employee exists
         if (!employee) {
-            req.flash('error_msg', 'Invalid username or password');
-            return res.redirect('/login');
+            return res.status(400).json({ success: false, message: 'Invalid username or password' });
         }
 
         // Compare the entered password with the stored hashed password
         const match = await bcrypt.compare(password, employee.password);
         if (!match) {
-            req.flash('error_msg', 'Invalid username or password');
-            return res.redirect('/login');
+            return res.status(400).json({ success: false, message: 'Invalid username or password' });
         }
 
         // Successful login: Store employee information in the session
         req.session.employeeId = employee._id; // Store employee ID in the session
-        req.flash('success_msg', 'Login successful!');
-        res.redirect('/menu'); // Adjust the redirect path as necessary
+
+        // Return success message as JSON
+        return res.status(200).json({ success: true, message: 'Login successful!' });
     } catch (error) {
         console.error('Error during employee login:', error);
-        req.flash('error_msg', 'Error logging in, please try again.');
-        res.redirect('/login');
+        return res.status(500).json({ success: false, message: 'Error logging in, please try again.' });
     }
 });
 
